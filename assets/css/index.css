@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,700&display=swap');
+:root{
+  --white-color: #FFFFFF;
+  --primary-color: #f44749;
+  --secondary-color: #f3af24;
+  --section-bg-color: #F9F9F9;
+  --dark-color: #000000;
+  --title-color: #565758;
+  --news-title-color: #292828;
+  --p-color: #717275;
+  --border-color: #eaeaea;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+button{
+  border: none;
+  outline: none;
+}
+.section{
+  padding: 150px 100px;
+}
+.section h1{
+  font-size: 3.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* NAVBAR */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 7%;
+  box-shadow: 0 7px 5px 5px rgba(0,0,0,0.3);
+}
+.navbar span{
+  font-weight: 700;
+  font-size: 1.85rem;
+}
+.navbar span:hover{
+  cursor: pointer;
+  color: var(--primary-color);
+}
+.navbar ul{
+  display: flex;
+  gap: 1.7rem;
+}
+.nav-links{
+  font-size: 1.2rem;
+  color: var(--p-color);
+}
+.nav-links:hover{
+  color: var(--primary-color);
+}
+
+.navbar button{
+  background-color: #dc3545;
+  color: var(--white-color);
+  padding: 0.8rem 1.85rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.navbar button:hover{
+  background-color: #bb2d3b;
+  border-color: #b02a37;
+  box-shadow: 0 0 0 0.25rem rgb(225 83 97 / 50%);
+}
+.active{
+  color: var(--primary-color);
+}
+
+
+/* HERO SECTION */
+.hero-section{
+  width: 100vw;
+  min-height: 92vh;
+  position: relative;
+}
+/* Hero Video */
+.video-wrap{
+  width: 100%;
+}
+.hero-section video{
+  width: 100%;
+  height: 100%;
+}
+/* Video Overlay */
+.overlay{
+  background-color: rgba(0,0,0,0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+/* Hero row */
+.row{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+/* Hero Text Container */
+.row .text-container{
+  width: 25rem;
+  color: var(--white-color);
+}
+.row .text-container h1{
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+.feedback {
+  margin: 2rem 0 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.feedback h4{
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+.feedback .star-icons .fa-star{
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+.text-container p{
+  font-size: 1.2rem;
+}
+/* Hero Carousel */
+.row .carousel{
+  width: 40rem;
+  height: 30rem;
+  position: relative;
+  overflow: hidden;
+}
+.row .carousel img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.row .carousel .text-content{
+  position: absolute;
+  bottom: 6%;
+  left: 3%;
+  color: var(--white-color);
+  z-index: 100;
+}
+.text-content .food-info{
+  display: flex;
+  gap: 1.3rem;
+  align-items: center;
+}
+.text-content .food-info h4{
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.carousel .overlay{
+  background-color: rgba(0,0,0,0.2);
+}
+.pill-btn{
+  padding: 1rem;
+  color: var(--secondary-color);
+  background-color: var(--white-color);
+  font-size: 1.2rem;
+  border-radius: 2rem;
+}
+.arrow-div{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+.arrow-div .arrow-btn{
+  padding: 15px 18px;
+  cursor: pointer;
+}
+.arrow-btn i{
+  font-size: 25px;
+  color: var(--white-color);
+}
+.left{
+  background-color: var(--secondary-color);
+}
+.right{
+  background-color: var(--primary-color);
+}
+.arrow-btn:hover {
+  background-color: var(--dark-color);
+}
+
+/* SPECIAL MENUS */
+.grid-box{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 50px 0;
+}
+.col .img-wrap{
+  width: 100%;
+  position: relative;
+}
+.col .img-wrap img{
+  width: 100%;
+  height: 100%;
+}
+.col .img-wrap span.meal{
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 3px;
+  position: absolute;
+  top: 4%;
+  right: 4%;
+}
+.col .text-box {
+  padding: 0.75rem 1rem;
+}
+.col .text-box h4{
+  font-size: 2rem;
+  font-weight: 500;
+}
+.col .text-box .pill-btn{
+  margin: 0.5rem;
+  box-shadow: 2px 5px 4px 3px rgba(0,0,0,0.3);
+}
+.col .text-box .feedback{
+  margin-top: 0.75rem;
+}
+.menu-review{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.menu-review span{
+  color: var(--p-color);
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+/* FIXED IMAGE */ 
+.fixed-section{
+  background-image: url('../images/fixed-image.jpg');
+  width: 100vw;
+  height: 95vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
